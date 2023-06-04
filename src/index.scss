@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  // background-image: url("./assets/acc_dark.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // min-height: 90vh;
+  @apply bg-[url("./assets/acc\_dark.jpg")] bg-no-repeat bg-cover min-h-[90vh];
+  .header_main {
+    // color: rgb(253, 135, 0);
+    // width: 80%;
+    // margin: auto;
+    @apply text-[rgb(253,135,0)] w-4/5 m-auto;
+    .logo {
+      // padding-top: 3rem;
+      // font-size: 2rem;
+      // font-weight: bold;
+      @apply text-[2rem] font-bold pt-12;
+    }
+    .title {
+      // padding-top: 6rem;
+      // padding-bottom: 8rem;
+      // font-size: 5rem;
+      // line-height: 5rem;
+      // font-weight: bold;
+      @apply text-[5rem] leading-[5rem] font-bold pt-24 pb-32;
+    }
+    button {
+      // background-color: rgb(68, 36, 0);
+      // color: white;
+      // padding: 1rem 2rem;
+      // border-radius: 10rem;
+      // font-weight: bold;
+      // letter-spacing: 0.1rem;
+      @apply bg-[rgb(68,36,0)] text-[white] font-bold tracking-[0.1rem] px-8 py-4 rounded-[10rem];
+    }
+  }
+}
+
+.about {
+  // min-height: 90vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // background-color: #ffe082;
+  @apply min-h-[90vh] flex items-center justify-center bg-[#ffe082];
+  .about_info {
+    flex: 1;
+    // padding: 2rem 8rem;
+    @apply px-32 py-8;
+
+    .about_title {
+      // font-size: 3rem;
+      // margin-bottom: 3rem;
+      @apply text-5xl font-bold mb-12;
+    }
+    .about_text {
+      @apply text-2xl;
+    }
+  }
+  .about_image {
+    flex: 1;
+    // background-color: yellow;
+    // height: 60vh;
+    @apply bg-[yellow] h-[60vh];
+    img {
+      // width: 100%;
+      // height: 100%;
+      // object-fit: cover;
+      @apply w-full h-full object-cover;
+    }
+  }
+}
+
+.service {
+  // padding: 6rem 0rem;
+  // background-color: #ffd54f;
+  @apply bg-[#ffd54f] px-0 py-24;
+  .service_main {
+    // width: 80%;
+    // margin: auto;
+    @apply w-4/5 m-auto;
+  }
+  .service_title {
+    // font-size: 3rem;
+    // text-align: center;
+    // font-weight: bold;
+    // margin-bottom: 5rem;
+    @apply text-5xl text-center font-bold mb-20;
+  }
+  .cards {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    // gap: 5rem;
+    @apply grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] gap-20;
+    .card {
+      // text-align: center;
+      // padding: 2rem;
+      // box-shadow: 0.05rem 0.05rem 0.5rem #b88a00;
+      // transition: all 0.3s ease;
+      // cursor: pointer;
+      // &:hover {
+      //   opacity: 0.5;
+      //   box-shadow: 0.2rem 0.2rem 0.5rem #b88a00;
+      //   transform: translateY(-1rem);
+      // }
+      @apply text-center shadow-[0.05rem_0.05rem_0.5rem_#b88a00] transition-all duration-[0.3s] ease-[ease] cursor-pointer p-8 hover:opacity-60 hover:shadow-[0.2rem_0.2rem_0.5rem_#b88a00] hover:translate-y-[-1rem];
+
+      .card_icon {
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // font-size: 8rem;
+        // margin-bottom: 2rem;
+        @apply flex items-center justify-center text-9xl mb-8;
+      }
+      .card_title {
+        // font-size: 1.2rem;
+        // font-weight: bold;
+        // margin-bottom: 0.5rem;
+        @apply text-[1.2rem] font-bold mb-2;
+      }
+    }
+  }
+}
+
+.testimonial {
+  .testimonial_main {
+    // padding: 4rem 0rem 8rem 0rem;
+    // background-color: #ffd54f;
+    @apply bg-[#ffd54f] pt-16 pb-32 px-0;
+    .testimonial_title {
+      // font-size: 5rem;
+      // font-weight: bold;
+      // text-align: center;
+      // margin-bottom: 5rem;
+      @apply text-[5rem] font-bold text-center mb-20;
+    }
+    .test_cards {
+      // background-color: skyblue;
+      // width: 80%;
+      // margin: auto;
+      // display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      // gap: 3rem;
+      @apply w-4/5 grid grid-cols-[repeat(3,1fr)] gap-12 m-auto;
+      .test_card {
+        // text-align: center;
+        // padding: 1rem;
+        @apply text-center p-4;
+        .test_img {
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          // padding: 2rem;
+          @apply flex items-center justify-center p-8;
+          img {
+            // overflow: hidden;
+            // border-radius: 50%;
+            // height: 100%;
+            // width: 100%;
+            // object-fit: cover;
+            @apply overflow-hidden h-full w-full object-cover rounded-[50%];
+          }
+        }
+        .test_info {
+          .test_name,
+          .test_job {
+            // font-weight: bold;
+            // font-size: 1.3rem;
+            @apply font-bold text-[1.3rem];
+          }
+          .test_text {
+            // margin-top: 1rem;
+            // font-weight: 500;
+            @apply font-medium mt-4;
+          }
+        }
+      }
+    }
+  }
+}
+
+.graph {
+  // padding: 10rem 0rem;
+  // background-color: #ffe082;
+  @apply bg-[#ffe082] px-0 py-40;
+  .graph_main {
+    // width: 80%;
+    // margin: auto;
+    // display: flex;
+    @apply w-4/5 flex m-auto;
+  }
+  .graph_icon {
+    flex: 1;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // font-size: 12rem;
+    @apply flex items-center justify-center text-[12rem];
+  }
+  .graph_text {
+    flex: 1.5;
+    // font-weight: bold;
+    // font-size: 3rem;
+
+    @apply font-bold text-5xl;
+  }
+}
+
+.contact {
+  .contact_img {
+    // opacity: 0.8;
+    // height: 60vh;
+    // overflow: hidden;
+    @apply opacity-80 h-[60vh] overflow-hidden;
+    img {
+      // height: 100%;
+      // width: 100%;
+      // object-fit: cover;
+      @apply h-full w-full object-cover;
+    }
+  }
+  .contact_info {
+    // background-color: #ffd54f;
+    @apply bg-[#ffd54f];
+  }
+  .contact_info_main {
+    // width: 80%;
+    // margin: auto;
+    // padding: 6rem;
+    @apply w-4/5 m-auto py-24;
+    .contact_title {
+      // font-size: 4rem;
+      // font-weight: bold;
+      // margin-bottom: 3rem;
+      @apply text-[4rem] font-bold mb-12;
+    }
+    .contact_cards {
+      // display: flex;
+      // align-items: center;
+      // justify-content: space-between;
+      @apply flex items-center justify-between;
+    }
+    .contact_card_title {
+      // font-size: 1.2rem;
+      // font-weight: bold;
+      // margin-bottom: 0.5rem;
+      @apply text-[1.2rem] font-bold mb-2;
+    }
+  }
+}

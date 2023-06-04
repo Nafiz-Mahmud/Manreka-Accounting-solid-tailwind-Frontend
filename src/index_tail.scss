@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply bg-[url("./assets/acc\_dark.jpg")] bg-no-repeat bg-cover min-h-[40rem];
+  .header_main {
+    @apply text-[rgb(253,135,0)] w-4/5 m-auto;
+
+    .logo {
+      @apply text-[1.5rem] sm:text-4xl font-bold pt-12;
+    }
+    .title_wrap {
+      @apply text-[2rem] sm:text-[4rem] lg:text-[5rem] leading-[5rem] font-bold mt-24 mb-20 sm:mb-32;
+    }
+    .book {
+      background-color: rgb(151, 81, 0);
+      // background-color: rgb(122, 65, 0);
+      @apply text-[white] font-bold tracking-[0.1rem] px-8 py-4 rounded-[10rem] hover:bg-[rgb(122,65,0)] hover:scale-105 transition-all duration-300;
+      // @apply bg-[rgb(68,36,0)] text-[white] font-bold tracking-[0.1rem] px-8 py-4 rounded-[10rem];
+    }
+  }
+}
+
+.about {
+  @apply min-h-[90vh] flex flex-col sm:flex-row flex-col-reverse items-center justify-center bg-[#ffe082];
+  .about_info {
+    flex: 0.8;
+    // background-color: coral;
+    @apply px-8 md:px-16 lg:px-32 py-8;
+
+    .about_title {
+      // background-color: lightgreen;
+      @apply text-2xl 400:text-3xl sm:text-5xl md:text-5xl font-bold mb-12;
+    }
+    .about_text {
+      // background-color: lightgreen;
+      @apply text-2xl;
+    }
+  }
+  .about_image {
+    flex: 1;
+
+    @apply h-[60vh];
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}
+
+.service {
+  @apply bg-[#ffd54f] px-0 py-24;
+  .service_main {
+    @apply w-4/5 m-auto;
+  }
+  .service_title {
+    @apply text-5xl text-center font-bold mb-20;
+  }
+  .cards {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] 400:grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-20;
+    .card {
+      @apply text-center shadow-[0.05rem_0.05rem_0.5rem_#b88a00] transition-all duration-[0.3s] ease-[ease] cursor-pointer p-8 hover:opacity-60 hover:shadow-[0.2rem_0.2rem_0.5rem_#b88a00] hover:translate-y-[-1rem];
+
+      .card_icon {
+        @apply flex items-center justify-center text-9xl mb-8;
+      }
+      .card_title {
+        @apply text-[1.2rem] font-bold mb-2;
+      }
+    }
+  }
+}
+
+.testimonial {
+  @apply pt-16 pb-32 bg-[#ffd54f];
+  .testimonial_main {
+    @apply bg-[#ffd54f];
+    .testimonial_title {
+      @apply text-5xl md:text-[5rem] font-bold text-center mb-20;
+    }
+    .test_cards {
+      @apply w-4/5 grid grid-cols-[repeat(1,1fr)]  sm:grid-cols-[repeat(2,1fr)] md:grid-cols-[repeat(3,1fr)] gap-12 m-auto;
+      .test_card {
+        @apply text-center p-4;
+        .test_img {
+          @apply flex items-center justify-center sm:p-2 md:p-4 lg:p-8;
+          img {
+            @apply overflow-hidden h-full w-full object-cover rounded-[50%];
+          }
+        }
+        .test_info {
+          margin-top: 2rem;
+          .test_name,
+          .test_job {
+            @apply font-bold text-[1.3rem];
+          }
+          .test_text {
+            @apply font-medium mt-4;
+          }
+        }
+      }
+    }
+  }
+}
+
+.graph {
+  @apply bg-[#ffe082] px-0 py-40;
+  .graph_main {
+    @apply w-4/5 flex flex-col sm:flex-row justify-around items-center gap-12 sm:gap-8  m-auto;
+  }
+  .graph_icon {
+    flex: 1;
+
+    @apply flex items-center justify-center text-[12rem];
+  }
+  .graph_text {
+    flex: 1.5;
+
+    @apply font-bold text-3xl   sm:text-5xl;
+  }
+}
+
+.contact {
+  .contact_img {
+    @apply opacity-80 h-[60vh] overflow-hidden;
+    img {
+      @apply h-full w-full object-cover;
+    }
+  }
+  .contact_info {
+    @apply bg-[#ffd54f];
+  }
+  .contact_info_main {
+    @apply w-4/5 m-auto py-24;
+    .contact_title {
+      @apply text-4xl sm:text-[4rem] font-bold mb-12;
+    }
+    .contact_cards {
+      // background-color: coral;
+      // @apply flex items-center justify-between;
+      @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8;
+    }
+
+    .contact_card_title {
+      @apply text-[1.2rem] font-bold mb-2;
+    }
+  }
+}
